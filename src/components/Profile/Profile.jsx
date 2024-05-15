@@ -1,9 +1,9 @@
+import clsx from "clsx";
 import css from "./Profile.module.css";
 
 export default function Profile({
   userData: { username, tag, location, avatar, stats },
 }) {
-  const firstListClass = [css.listItem, css.last].join(" ");
   return (
     <div className={css.container}>
       <div className={css.item}>
@@ -15,7 +15,7 @@ export default function Profile({
         </div>
 
         <ul className={css.list}>
-          <li className={firstListClass}>
+          <li className={clsx(css.listItem, css.last)}>
             <span>Followers</span>
             <span className={css.stats}>{stats.followers}</span>
           </li>
