@@ -1,4 +1,4 @@
-import TransactionHistoryItem from "./TransactionHistoryItem/TransactionHistoryItem";
+import TransactionHistoryItem from "../TransactionHistoryItem/TransactionHistoryItem";
 import css from "./TransactionHistory.module.css";
 
 export default function TransactionHistory({ transactionData }) {
@@ -15,9 +15,9 @@ export default function TransactionHistory({ transactionData }) {
           </tr>
         </thead>
         {transactionData.map((tran) => (
-          <thead key={tran.id}>
+          <tbody key={tran.id}>
             <TransactionHistoryItem transactionData={tran} />
-          </thead>
+          </tbody>
         ))}
       </table>
     </div>
